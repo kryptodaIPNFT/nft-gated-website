@@ -11,6 +11,8 @@ const login = async (req, res) => {
   }
 
   const PRIVATE_KEY = process.env.ADMIN_PRIVATE_KEY;
+  console.log("14:", PRIVATE_KEY);
+
   if (!PRIVATE_KEY) {
     console.error("Missing ADMIN_PRIVATE_KEY environment variable");
     return res.status(500).json({
